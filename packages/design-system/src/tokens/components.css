@@ -1,0 +1,9 @@
+:root {
+  --component-card-bg: hsl(var(--sys-bg-surface));
+  --component-card-border: hsl(var(--sys-border-default));
+  --component-card-shadow: var(--elevation-1);
+  --component-focus-ring: hsl(var(--sys-brand-primary));
+  --component-badge-radius: var(--radius-md);
+  --component-panel-radius: var(--radius-lg);
+}
+

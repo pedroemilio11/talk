@@ -1,0 +1,15 @@
+{
+  "name": "@fluxi/design-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./tailwind/preset": "./src/tailwind/preset.ts"
+  }
+}

@@ -1,0 +1,90 @@
+.crm-shell {
+  min-height: 100vh;
+  display: flex;
+  background: var(--gradient-shell), hsl(var(--sys-bg-primary));
+  color: hsl(var(--sys-text-primary));
+}
+
+.crm-shell-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.crm-page {
+  width: 100%;
+  padding: var(--space-6);
+}
+
+.crm-page-inner {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.crm-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.crm-globalbar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  border-bottom: 1px solid hsl(var(--sys-sidebar-border));
+  background: rgb(29 34 31 / 0.8);
+  backdrop-filter: blur(14px);
+}
+
+.crm-product-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.5rem 0.875rem;
+  border-radius: 999px;
+  background: rgb(219 84 59 / 0.12);
+  color: hsl(var(--sys-brand-primary));
+  border: 1px solid rgb(219 84 59 / 0.24);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.crm-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.crm-page-title {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.crm-page-subtitle {
+  margin: 0.5rem 0 0;
+  color: hsl(var(--sys-text-secondary));
+  font-size: 0.95rem;
+}
+
+.crm-page-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.crm-panel,
+.crm-card {
+  background: hsl(var(--sys-bg-surface));
+  border: 1px solid hsl(var(--sys-border-default));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+}
+

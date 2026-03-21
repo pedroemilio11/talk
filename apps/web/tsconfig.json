@@ -1,0 +1,52 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowJs": false,
+    "incremental": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@fluxi/design-system": [
+        "../../packages/design-system/src/index.ts"
+      ],
+      "@fluxi/design-system/*": [
+        "../../packages/design-system/src/*"
+      ],
+      "@fluxi/ui": [
+        "../../packages/ui/src/index.ts"
+      ],
+      "@fluxi/ui/*": [
+        "../../packages/ui/src/*"
+      ],
+      "@fluxi/shared-types": [
+        "../../packages/shared-types/src/index.ts"
+      ],
+      "@fluxi/module-sdk": [
+        "../../packages/module-sdk/src/index.ts"
+      ],
+      "@fluxi/modules/*": [
+        "../../modules/*/src/index.ts"
+      ]
+    },
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

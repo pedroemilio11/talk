@@ -1,0 +1,10 @@
+{
+  "name": "@fluxi/module-sdk",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@types/react": "^19.0.10",
+    "react": "^19.0.0"
+  }
+}

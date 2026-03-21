@@ -1,0 +1,43 @@
+:root {
+  --sys-bg-primary: 144 8% 12%;
+  --sys-bg-surface: 144 8% 14%;
+  --sys-bg-muted: 144 7% 18%;
+  --sys-text-primary: 44 69% 94%;
+  --sys-text-secondary: 44 22% 72%;
+  --sys-border-default: 144 6% 24%;
+
+  --sys-brand-primary: 9 70% 55%;
+  --sys-brand-primary-foreground: 44 69% 94%;
+  --sys-danger: 9 70% 55%;
+  --sys-danger-foreground: 44 69% 94%;
+
+  --sys-sidebar-bg: 144 8% 10%;
+  --sys-sidebar-fg: 44 69% 94%;
+  --sys-sidebar-accent: 144 7% 18%;
+  --sys-sidebar-border: 144 6% 22%;
+
+  --sys-status-available: var(--ref-status-success);
+  --sys-status-reserved: var(--ref-status-warning);
+  --sys-status-sold: var(--ref-status-danger);
+  --sys-status-blocked: var(--ref-status-blocked);
+  --sys-status-negotiation: var(--ref-status-info);
+  --sys-status-permuta: var(--ref-status-special);
+}
+
+.dark {
+  --sys-bg-primary: 144 8% 12%;
+  --sys-bg-surface: 144 8% 14%;
+  --sys-bg-muted: 144 7% 18%;
+  --sys-text-primary: 44 69% 94%;
+  --sys-text-secondary: 44 22% 72%;
+  --sys-border-default: 144 6% 24%;
+  --sys-brand-primary: 9 70% 55%;
+  --sys-brand-primary-foreground: 44 69% 94%;
+  --sys-danger: 9 70% 55%;
+  --sys-danger-foreground: 44 69% 94%;
+  --sys-sidebar-bg: 144 8% 10%;
+  --sys-sidebar-fg: 44 69% 94%;
+  --sys-sidebar-accent: 144 7% 18%;
+  --sys-sidebar-border: 144 6% 22%;
+}
+

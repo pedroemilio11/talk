@@ -1,0 +1,79 @@
+@import "../tokens/primitives.css";
+@import "../tokens/semantic.css";
+@import "../tokens/components.css";
+
+:root {
+  --background: var(--sys-bg-primary);
+  --foreground: var(--sys-text-primary);
+  --card: var(--sys-bg-surface);
+  --card-foreground: var(--sys-text-primary);
+  --primary: var(--sys-brand-primary);
+  --primary-foreground: var(--sys-brand-primary-foreground);
+  --muted: var(--sys-bg-muted);
+  --muted-foreground: var(--sys-text-secondary);
+  --border: var(--sys-border-default);
+  --ring: var(--sys-brand-primary);
+  --destructive: var(--sys-danger);
+  --destructive-foreground: var(--sys-danger-foreground);
+  --sidebar-bg: var(--sys-sidebar-bg);
+  --sidebar-fg: var(--sys-sidebar-fg);
+  --sidebar-accent: var(--sys-sidebar-accent);
+  --sidebar-border: var(--sys-sidebar-border);
+
+  --status-available: var(--sys-status-available);
+  --status-reserved: var(--sys-status-reserved);
+  --status-sold: var(--sys-status-sold);
+  --status-blocked: var(--sys-status-blocked);
+  --status-negotiation: var(--sys-status-negotiation);
+  --status-permuta: var(--sys-status-permuta);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(var(--sys-brand-primary)) 0%,
+    hsl(10 69% 48%) 100%
+  );
+
+  --gradient-shell: radial-gradient(
+      circle at top left,
+      rgb(219 84 59 / 0.12),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      hsl(var(--sys-bg-primary)) 0%,
+      hsl(144 8% 10%) 100%
+    );
+
+  --radius: var(--radius-lg);
+}
+
+html,
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-content);
+}
+
+body {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: hsl(var(--border));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+[role="button"] {
+  font-family: var(--font-heading);
+  color: hsl(var(--foreground));
+}
+

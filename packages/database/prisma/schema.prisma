@@ -1,0 +1,90 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Tenant {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  users     User[]
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String?
+  tenantId     String
+  createdAt    DateTime @default(now())
+
+  tenant Tenant   @relation(fields: [tenantId], references: [id])
+  roles  UserRole[]
+}
+
+model Role {
+  id          String           @id @default(cuid())
+  name        String
+  tenantId    String?
+  permissions RolePermission[]
+  users       UserRole[]
+}
+
+model Permission {
+  id          String           @id @default(cuid())
+  key         String           @unique
+  description String?
+  roles       RolePermission[]
+}
+
+model UserRole {
+  userId String
+  roleId String
+
+  user User @relation(fields: [userId], references: [id])
+  role Role @relation(fields: [roleId], references: [id])
+
+  @@id([userId, roleId])
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+
+  role       Role       @relation(fields: [roleId], references: [id])
+  permission Permission @relation(fields: [permissionId], references: [id])
+
+  @@id([roleId, permissionId])
+}
+
+model Module {
+  id          String   @id
+  name        String
+  description String?
+  enabled     Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model Integration {
+  id        String   @id
+  name      String
+  enabled   Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model ModuleIntegration {
+  moduleId      String
+  integrationId String
+  enabled       Boolean @default(true)
+  config        Json?
+
+  module      Module      @relation(fields: [moduleId], references: [id])
+  integration Integration @relation(fields: [integrationId], references: [id])
+
+  @@id([moduleId, integrationId])
+}
+

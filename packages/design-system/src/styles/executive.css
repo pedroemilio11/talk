@@ -1,0 +1,35 @@
+.crm-vision-stage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.crm-vision-hero {
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgb(219 84 59 / 0.18);
+  background:
+    radial-gradient(circle at top left, rgb(219 84 59 / 0.12), transparent 40%),
+    hsl(var(--sys-bg-surface));
+  box-shadow: var(--elevation-2);
+}
+
+.crm-vision-eyebrow {
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: hsl(var(--sys-brand-primary));
+}
+
+.crm-vision-title {
+  margin: 0.75rem 0 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.98;
+}
+
+.crm-vision-subtitle {
+  margin-top: 1rem;
+  max-width: 72ch;
+  color: hsl(var(--sys-text-secondary));
+}
+
