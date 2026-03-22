@@ -6,17 +6,6 @@ export default async function FluxiHomePage() {
 
   return (
     <div className="space-y-5">
-      <section className="fluxi-hero">
-        <p className="text-label uppercase tracking-[0.16em] text-muted-foreground">Fluxi OS</p>
-        <h1 className="mt-1 text-5xl font-semibold tracking-tight text-foreground">
-          Todos os modulos na mesma base.
-        </h1>
-        <p className="mt-3 max-w-3xl text-body-sm text-muted-foreground">
-          Fluxi centraliza autenticacao, permissoes, design system, integracoes e acesso
-          aos produtos do ecossistema.
-        </p>
-      </section>
-
       <section>
         <div className="fluxi-hero">
           <div>
