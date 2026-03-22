@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@fluxi/ui";
 import { getEnabledModules } from "@/modules/get-enabled-modules";
@@ -18,7 +19,17 @@ export function ModuleGrid({ userPermissions }: Props) {
               <Card className="fluxi-card transition hover:border-primary/40 hover:shadow-lg">
                 <CardHeader>
                   <CardTitle>
-                    <span className="text-xl">{moduleItem.name}</span>
+                    {moduleItem.id === "crm" ? (
+                      <Image
+                        src="/brands/fluxi-crm-dark.png"
+                        alt="Fluxi CRM"
+                        width={155}
+                        height={28}
+                        className="h-7 w-auto"
+                      />
+                    ) : (
+                      <span className="text-xl">{moduleItem.name}</span>
+                    )}
                   </CardTitle>
                   <CardDescription>
                     {moduleItem.description ?? "Modulo do ecossistema Fluxi"}
@@ -39,7 +50,17 @@ export function ModuleGrid({ userPermissions }: Props) {
             <Card className="fluxi-card transition hover:border-primary/40 hover:shadow-lg">
               <CardHeader>
                 <CardTitle>
-                  <span className="text-xl">{moduleItem.name}</span>
+                  {moduleItem.id === "crm" ? (
+                    <Image
+                      src="/brands/fluxi-crm-dark.png"
+                      alt="Fluxi CRM"
+                      width={155}
+                      height={28}
+                      className="h-7 w-auto"
+                    />
+                  ) : (
+                    <span className="text-xl">{moduleItem.name}</span>
+                  )}
                 </CardTitle>
                 <CardDescription>
                   {moduleItem.description ?? "Modulo do ecossistema Fluxi"}

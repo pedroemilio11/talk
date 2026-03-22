@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getEnabledModules } from "@/modules/get-enabled-modules";
@@ -39,9 +40,19 @@ export function Sidebar({ userPermissions }: Props) {
               <a
                 key={moduleItem.id}
                 href={moduleItem.externalUrl}
-                className="fluxi-nav-link"
+                className={`fluxi-nav-link ${moduleItem.id === "crm" ? "flex items-center" : ""}`}
               >
-                {moduleItem.name}
+                {moduleItem.id === "crm" ? (
+                  <Image
+                    src="/brands/fluxi-crm-dark.png"
+                    alt="Fluxi CRM"
+                    width={92}
+                    height={16}
+                    className="h-4 w-auto"
+                  />
+                ) : (
+                  moduleItem.name
+                )}
               </a>
             );
           }
