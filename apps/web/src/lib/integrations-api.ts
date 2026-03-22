@@ -16,7 +16,7 @@ export type ModuleIntegrationSetting = {
   accessProfile: "admin" | "gestor" | "operador" | "leitura";
 };
 
-const API_URL = process.env.NEXT_PUBLIC_FLUXI_API_URL ?? "http://localhost:3333";
+const API_URL = process.env.NEXT_PUBLIC_FLUXI_API_URL ?? "/api";
 
 export async function getIntegrationCatalog(): Promise<IntegrationCatalogItem[]> {
   const response = await fetch(`${API_URL}/integrations/catalog`, { cache: "no-store" });
@@ -48,4 +48,3 @@ export async function upsertIntegrationSetting(
   if (!response.ok) throw new Error("settings update failed");
   return response.json();
 }
-
