@@ -1,21 +1,25 @@
 :root {
-  --sys-bg-primary: 144 8% 12%;
-  --sys-bg-surface: 144 8% 14%;
-  --sys-bg-muted: 144 7% 18%;
-  --sys-text-primary: 44 69% 94%;
-  --sys-text-secondary: 44 22% 72%;
-  --sys-border-default: 144 6% 24%;
+  /* Core surfaces */
+  --sys-bg-primary: 220 23% 97%;
+  --sys-bg-surface: 0 0% 100%;
+  --sys-bg-muted: 220 18% 94%;
+  --sys-text-primary: 220 16% 13%;
+  --sys-text-secondary: 225 11% 44%;
+  --sys-border-default: 220 17% 86%;
 
-  --sys-brand-primary: 9 70% 55%;
-  --sys-brand-primary-foreground: 44 69% 94%;
-  --sys-danger: 9 70% 55%;
-  --sys-danger-foreground: 44 69% 94%;
+  /* Brand and feedback */
+  --sys-brand-primary: 10 69% 55%;
+  --sys-brand-primary-foreground: 0 0% 100%;
+  --sys-danger: 0 84% 60%;
+  --sys-danger-foreground: 0 0% 100%;
 
-  --sys-sidebar-bg: 144 8% 10%;
-  --sys-sidebar-fg: 44 69% 94%;
-  --sys-sidebar-accent: 144 7% 18%;
-  --sys-sidebar-border: 144 6% 22%;
+  /* Sidebar */
+  --sys-sidebar-bg: 230 25% 96%;
+  --sys-sidebar-fg: 228 18% 18%;
+  --sys-sidebar-accent: 230 20% 92%;
+  --sys-sidebar-border: 220 16% 83%;
 
+  /* Status */
   --sys-status-available: var(--ref-status-success);
   --sys-status-reserved: var(--ref-status-warning);
   --sys-status-sold: var(--ref-status-danger);
@@ -25,19 +29,20 @@
 }
 
 .dark {
-  --sys-bg-primary: 144 8% 12%;
-  --sys-bg-surface: 144 8% 14%;
-  --sys-bg-muted: 144 7% 18%;
+  --sys-bg-primary: 222 16% 12%;
+  --sys-bg-surface: 223 14% 15%;
+  --sys-bg-muted: 223 13% 20%;
   --sys-text-primary: 44 69% 94%;
-  --sys-text-secondary: 44 22% 72%;
-  --sys-border-default: 144 6% 24%;
-  --sys-brand-primary: 9 70% 55%;
-  --sys-brand-primary-foreground: 44 69% 94%;
-  --sys-danger: 9 70% 55%;
-  --sys-danger-foreground: 44 69% 94%;
-  --sys-sidebar-bg: 144 8% 10%;
-  --sys-sidebar-fg: 44 69% 94%;
-  --sys-sidebar-accent: 144 7% 18%;
-  --sys-sidebar-border: 144 6% 22%;
-}
+  --sys-text-secondary: 220 10% 72%;
+  --sys-border-default: 223 10% 28%;
 
+  --sys-brand-primary: 10 69% 55%;
+  --sys-brand-primary-foreground: 0 0% 100%;
+  --sys-danger: 0 84% 55%;
+  --sys-danger-foreground: 0 0% 100%;
+
+  --sys-sidebar-bg: 226 20% 10%;
+  --sys-sidebar-fg: 220 13% 94%;
+  --sys-sidebar-accent: 223 18% 19%;
+  --sys-sidebar-border: 224 12% 24%;
+}

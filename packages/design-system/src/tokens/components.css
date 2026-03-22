@@ -1,9 +1,30 @@
 :root {
-  --component-card-bg: hsl(var(--sys-bg-surface));
-  --component-card-border: hsl(var(--sys-border-default));
+  /* Component semantic aliases */
+  --component-card-bg: var(--sys-bg-surface);
+  --component-card-border: var(--sys-border-default);
   --component-card-shadow: var(--elevation-1);
-  --component-focus-ring: hsl(var(--sys-brand-primary));
+
+  --component-focus-ring: var(--sys-brand-primary);
+
   --component-badge-radius: var(--radius-md);
   --component-panel-radius: var(--radius-lg);
+
+  /* Interactive states */
+  --component-hover-overlay: var(--sys-brand-primary);
+  --component-active-overlay: var(--sys-brand-primary);
+
+  /* Input / form tokens */
+  --component-input-bg: var(--sys-bg-surface);
+  --component-input-border: var(--sys-border-default);
+  --component-input-focus-ring: var(--sys-brand-primary);
+  --component-input-error: var(--sys-danger);
+
+  /* KPI / stats card */
+  --component-kpi-bg: var(--sys-bg-surface);
+  --component-kpi-border: var(--sys-border-default);
+  --component-kpi-shadow: var(--elevation-1);
 }
 
+.dark {
+  --component-card-shadow: var(--elevation-1);
+}
