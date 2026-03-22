@@ -1,11 +1,16 @@
 :root {
-  /* Brand palette (HSL components for hsl(var(--token))) */
+  --font-heading: "Transducer", "Inter", sans-serif;
+  --font-content: "Inter", sans-serif;
+
+  --font-size-body-sm: 0.875rem;
+  --font-size-label: 0.75rem;
+  --font-size-caption: 0.625rem;
+
   --ref-brand-50: 20 100% 97%;
   --ref-brand-100: 21 86% 88%;
-  --ref-brand-500: 10 69% 55%;
+  --ref-brand-500: 9 70% 55%;
   --ref-brand-600: 10 69% 48%;
 
-  /* Neutral palette */
   --ref-neutral-50: 220 20% 98%;
   --ref-neutral-100: 220 16% 95%;
   --ref-neutral-200: 220 14% 89%;
@@ -17,7 +22,6 @@
   --ref-neutral-900: 220 16% 13%;
   --ref-neutral-950: 220 18% 9%;
 
-  /* Status palette */
   --ref-status-success: 142 76% 36%;
   --ref-status-warning: 45 93% 47%;
   --ref-status-danger: 9 70% 55%;
@@ -25,13 +29,11 @@
   --ref-status-blocked: 0 0% 45%;
   --ref-status-special: 280 65% 55%;
 
-  /* Radius */
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.25rem;
 
-  /* Spacing scale */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -42,13 +44,8 @@
   --space-10: 2.5rem;
   --space-12: 3rem;
 
-  /* Typography */
-  --font-size-body-sm: 0.875rem;
-  --font-size-label: 0.75rem;
-  --font-size-caption: 0.625rem;
-
-  /* Elevation (M3-inspired) */
   --elevation-1: 0 1px 2px 0 rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
   --elevation-2: 0 1px 2px 0 rgb(0 0 0 / 30%), 0 2px 6px 2px rgb(0 0 0 / 15%);
   --elevation-3: 0 1px 3px 0 rgb(0 0 0 / 30%), 0 4px 8px 3px rgb(0 0 0 / 15%);
 }
+
