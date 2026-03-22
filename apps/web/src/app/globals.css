@@ -2,3 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 222 16% 12%;
+    --foreground: 44 69% 94%;
+    --card: 223 14% 15%;
+    --card-foreground: 44 69% 94%;
+    --primary: 10 69% 55%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 223 13% 20%;
+    --muted-foreground: 220 10% 72%;
+    --border: 223 10% 28%;
+    --ring: 10 69% 55%;
+    --sidebar-background: 226 20% 10%;
+    --sidebar-foreground: 220 13% 94%;
+    --sidebar-accent: 223 18% 19%;
+    --sidebar-border: 224 12% 24%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(960px 460px at -8% -14%, hsl(var(--primary) / 0.15), transparent 54%),
+      radial-gradient(980px 420px at 110% -14%, hsl(var(--primary) / 0.12), transparent 54%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(222 18% 10%) 100%);
+    background-attachment: fixed;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  .fluxi-shell {
+    @apply min-h-screen;
+  }
+
+  .fluxi-sidebar {
+    @apply w-64 border-r px-4 py-4;
+    border-color: hsl(var(--sidebar-border));
+    background: linear-gradient(180deg, hsl(var(--sidebar-background)) 0%, hsl(226 22% 9%) 100%);
+  }
+
+  .fluxi-sidebar-brand {
+    @apply mb-6 border-b pb-4;
+    border-color: hsl(var(--sidebar-border));
+  }
+
+  .fluxi-nav-title {
+    @apply mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground;
+  }
+
+  .fluxi-nav-link {
+    @apply mb-1 block rounded-xl px-3 py-2 text-sm text-muted-foreground transition;
+  }
+
+  .fluxi-nav-link:hover {
+    @apply text-foreground;
+    background: hsl(var(--sidebar-accent));
+  }
+
+  .fluxi-nav-link-active {
+    @apply text-foreground;
+    background: linear-gradient(130deg, hsl(var(--primary) / 0.22), hsl(var(--primary) / 0.08));
+    box-shadow: inset 0 0 0 1px hsl(var(--primary) / 0.35);
+  }
+
+  .fluxi-topbar {
+    @apply sticky top-0 z-20 flex h-14 items-center justify-between border-b px-5 backdrop-blur-xl;
+    border-color: hsl(var(--border) / 0.9);
+    background: hsl(var(--background) / 0.82);
+  }
+
+  .fluxi-pill {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em];
+    border: 1px solid hsl(var(--primary) / 0.3);
+    background: hsl(var(--primary) / 0.14);
+    color: hsl(var(--primary));
+  }
+
+  .fluxi-tab {
+    @apply rounded-full px-3 py-1.5 text-sm text-muted-foreground transition;
+  }
+
+  .fluxi-tab:hover {
+    @apply text-foreground;
+    background: hsl(var(--muted));
+  }
+
+  .fluxi-tab-active {
+    @apply text-foreground;
+    background: hsl(var(--primary) / 0.16);
+    box-shadow: inset 0 0 0 1px hsl(var(--primary) / 0.35);
+  }
+
+  .fluxi-search {
+    @apply hidden min-w-[320px] items-center rounded-full border px-3 py-1.5 text-sm text-muted-foreground lg:flex;
+    border-color: hsl(var(--border));
+    background: hsl(var(--card) / 0.72);
+  }
+
+  .fluxi-cta {
+    @apply rounded-full px-4 py-2 text-sm font-semibold text-primary-foreground;
+    background: hsl(var(--primary));
+  }
+
+  .fluxi-main {
+    @apply px-5 py-5;
+  }
+
+  .fluxi-hero {
+    @apply mb-5 rounded-3xl border p-6;
+    border-color: hsl(var(--border) / 0.78);
+    background: linear-gradient(145deg, hsl(var(--card) / 0.96) 0%, hsl(var(--card) / 0.78) 100%);
+    box-shadow: 0 18px 40px -24px hsl(0 0% 0% / 0.7);
+  }
+
+  .fluxi-card {
+    @apply rounded-2xl border;
+    border-color: hsl(var(--border) / 0.76);
+    background: linear-gradient(160deg, hsl(var(--card) / 0.96), hsl(var(--card) / 0.86));
+    box-shadow: 0 16px 32px -24px hsl(0 0% 0% / 0.7);
+  }
+}

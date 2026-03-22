@@ -1,9 +1,13 @@
 import type { PropsWithChildren, ReactNode } from "react";
 
-export function Card({ children }: PropsWithChildren) {
+type CardProps = PropsWithChildren<{
+  className?: string;
+}>;
+
+export function Card({ children, className = "" }: CardProps) {
   return (
     <div
-      className="rounded-lg border bg-card text-card-foreground shadow-sm"
+      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
       style={{ boxShadow: "var(--component-card-shadow)" }}
     >
       {children}
@@ -26,4 +30,3 @@ export function CardDescription({ children }: { children: ReactNode }) {
 export function CardContent({ children }: PropsWithChildren) {
   return <div className="p-4">{children}</div>;
 }
-

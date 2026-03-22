@@ -10,20 +10,24 @@ export function ModuleGrid({ userPermissions }: Props) {
   const modules = getEnabledModules(userPermissions);
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-4 md:grid-cols-2">
       {modules.map((moduleItem) => {
         if (moduleItem.externalUrl) {
           return (
             <a key={moduleItem.id} href={moduleItem.externalUrl}>
-              <Card>
+              <Card className="fluxi-card transition hover:border-primary/40 hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle>{moduleItem.name}</CardTitle>
+                  <CardTitle>
+                    <span className="text-xl">{moduleItem.name}</span>
+                  </CardTitle>
                   <CardDescription>
                     {moduleItem.description ?? "Modulo do ecossistema Fluxi"}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">Abrir modulo</p>
+                  <p className="inline-flex rounded-full border border-border/70 bg-muted/60 px-3 py-1 text-body-sm text-foreground">
+                    Abrir modulo
+                  </p>
                 </CardContent>
               </Card>
             </a>
@@ -32,15 +36,19 @@ export function ModuleGrid({ userPermissions }: Props) {
 
         return (
           <Link key={moduleItem.id} href={moduleItem.basePath}>
-            <Card>
+            <Card className="fluxi-card transition hover:border-primary/40 hover:shadow-lg">
               <CardHeader>
-                <CardTitle>{moduleItem.name}</CardTitle>
+                <CardTitle>
+                  <span className="text-xl">{moduleItem.name}</span>
+                </CardTitle>
                 <CardDescription>
                   {moduleItem.description ?? "Modulo do ecossistema Fluxi"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">Abrir modulo</p>
+                <p className="inline-flex rounded-full border border-border/70 bg-muted/60 px-3 py-1 text-body-sm text-foreground">
+                  Abrir modulo
+                </p>
               </CardContent>
             </Card>
           </Link>
@@ -49,4 +57,3 @@ export function ModuleGrid({ userPermissions }: Props) {
     </div>
   );
 }
-

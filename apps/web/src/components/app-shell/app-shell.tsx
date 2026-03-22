@@ -15,17 +15,12 @@ export function AppShell({
   children
 }: Props) {
   return (
-    <div className="crm-shell">
+    <div className="fluxi-shell flex">
       <Sidebar userPermissions={userPermissions} />
-      <div className="crm-shell-main">
+      <div className="min-w-0 flex-1">
         <Topbar userName={userName} tenantName={tenantName} />
-        <main className="crm-page">
-          <div className="crm-page-inner">
-            <div className="crm-content">{children}</div>
-          </div>
-        </main>
+        <main className="fluxi-main">{children}</main>
       </div>
     </div>
   );
 }
-
