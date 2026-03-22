@@ -6,7 +6,8 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "create:module": "node tooling/create-module.mjs"
   },
   "dependencies": {
     "next": "^15.2.2",
