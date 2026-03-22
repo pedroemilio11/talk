@@ -9,7 +9,8 @@ export async function getCurrentUser(): Promise<UserSession> {
     permissions: [
       "crm.view",
       "crm.leads",
-      "crm.pipeline"
+      "crm.pipeline",
+      "paynow.view"
     ]
   };
 }
