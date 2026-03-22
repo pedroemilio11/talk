@@ -28,6 +28,12 @@ export function Sidebar({ userPermissions }: Props) {
         >
           Dashboard
         </Link>
+        <Link
+          href="/app/integracoes"
+          className={`fluxi-nav-link ${pathname === "/app/integracoes" ? "fluxi-nav-link-active" : ""}`}
+        >
+          Integracoes
+        </Link>
       </div>
 
       <div>

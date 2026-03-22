@@ -18,8 +18,12 @@ export function Topbar({ userName, tenantName }: Props) {
         <Link className={`fluxi-tab ${pathname === "/app" ? "fluxi-tab-active" : ""}`} href="/app">
           Dashboard
         </Link>
-        <span className="fluxi-tab">Pipeline</span>
-        <span className="fluxi-tab">Vendas</span>
+        <Link
+          className={`fluxi-tab ${pathname === "/app/integracoes" ? "fluxi-tab-active" : ""}`}
+          href="/app/integracoes"
+        >
+          Integracoes
+        </Link>
       </div>
 
       <div className="flex items-center gap-3">
