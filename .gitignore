@@ -3,3 +3,6 @@
 apps/web/.next
 node_modules
 *.tsbuildinfo
+.turbo
+apps/*/.turbo
+apps/api/dist
