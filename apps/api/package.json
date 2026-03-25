@@ -5,12 +5,14 @@
     "dev": "nest start --watch",
     "build": "nest build",
     "start": "node dist/main",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "smoke:fluxi-talk": "bash ./scripts/smoke-fluxi-talk.sh"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.11",
     "@nestjs/core": "^11.0.11",
     "@nestjs/platform-express": "^11.0.11",
+    "pg": "^8.20.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
@@ -19,7 +21,7 @@
     "@nestjs/schematics": "^11.0.1",
     "@nestjs/testing": "^11.0.11",
     "@types/node": "^22.13.10",
+    "@types/pg": "^8.20.0",
     "typescript": "^5.8.2"
   }
 }
-

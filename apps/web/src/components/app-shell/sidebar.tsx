@@ -40,8 +40,9 @@ export function Sidebar({ userPermissions }: Props) {
         <p className="fluxi-nav-title">Modulos</p>
         {modules.map((moduleItem) => {
           const isActive = pathname === moduleItem.basePath;
+          const forceInternalRoute = moduleItem.id === "talk";
 
-          if (moduleItem.externalUrl) {
+          if (moduleItem.externalUrl && !forceInternalRoute) {
             return (
               <a
                 key={moduleItem.id}

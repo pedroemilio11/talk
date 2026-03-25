@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: fluxi-talk-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: fluxi
+      POSTGRES_PASSWORD: fluxi
+      POSTGRES_DB: fluxi
+    ports:
+      - "5432:5432"
+    volumes:
+      - fluxi_talk_pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: fluxi-talk-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  fluxi_talk_pgdata:

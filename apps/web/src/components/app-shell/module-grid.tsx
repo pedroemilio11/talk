@@ -13,7 +13,9 @@ export function ModuleGrid({ userPermissions }: Props) {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {modules.map((moduleItem) => {
-        if (moduleItem.externalUrl) {
+        const forceInternalRoute = moduleItem.id === "talk";
+
+        if (moduleItem.externalUrl && !forceInternalRoute) {
           return (
             <a key={moduleItem.id} href={moduleItem.externalUrl}>
               <Card className="fluxi-card transition hover:border-primary/40 hover:shadow-lg">

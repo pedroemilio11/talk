@@ -6,3 +6,6 @@ node_modules
 .turbo
 apps/*/.turbo
 apps/api/dist
+apps/api/.env.vercel.prod
+apps/web/.next.bak.*
+.turbo.bak.*

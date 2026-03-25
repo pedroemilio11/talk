@@ -10,7 +10,8 @@ export async function getCurrentUser(): Promise<UserSession> {
       "crm.view",
       "crm.leads",
       "crm.pipeline",
-      "paynow.view"
+      "paynow.view",
+      "talk.view"
     ]
   };
 }

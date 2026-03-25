@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "../src/app.module";
 
@@ -21,4 +22,3 @@ export default async function handler(req: unknown, res: unknown) {
   const server = await bootstrap();
   return server(req, res);
 }
-
