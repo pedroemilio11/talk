@@ -1,11 +1,26 @@
-.vercel
+# dependencies
+**/node_modules/
+
+# build outputs
+**/dist/
+**/.turbo/
 .next
 apps/web/.next
-node_modules
-*.tsbuildinfo
-.turbo
-apps/*/.turbo
 apps/api/dist
+
+# logs
+*.log
+
+# env
+.env
+.env.*
+!.env.example
 apps/api/.env.vercel.prod
+
+# editor/os
+.DS_Store
+.vercel
+*.tsbuildinfo
+apps/*/.turbo
 apps/web/.next.bak.*
 .turbo.bak.*
